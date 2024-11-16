@@ -19,7 +19,7 @@ const LoginPage = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/login', { email, password });
+      const response = await axios.post('https://kwickchat.adilkk.online/api/auth/login', { email, password });
       localStorage.setItem('token', response.data.token); 
       localStorage.setItem('userName', response.data.name);
       navigate('/'); // Redirect to home page after successful login

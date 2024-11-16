@@ -22,7 +22,7 @@ const RegisterPage = () => {
     e.preventDefault();
     try {
       // Sending name along with email and password to the backend
-      const response = await axios.post('http://localhost:5000/api/auth/register', { name, email, password });
+      const response = await axios.post('https://kwickchat.adilkk.online/api/auth/register', { name, email, password });
       alert('Registration successful! Please log in.');
       navigate('/login');
     } catch (err) {

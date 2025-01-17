@@ -11,7 +11,7 @@ dotenv.config();
 const app = express();
 
 app.use(express.json());
-app.use(cors({ origin: 'https://kwickchat.adilkk.online', methods: ['GET', 'POST'] }));
+app.use(cors({ origin: 'https://kwickchat-adils-projects-30626c51.vercel.app', methods: ['GET', 'POST'] }));
 
 mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('MongoDB connected'))
@@ -20,7 +20,7 @@ mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopol
 app.use('/api/auth', authRoutes);
 
 const server = http.createServer(app);
-const io = socketIo(server, { cors: { origin: 'https://kwickchat.adilkk.online' } });
+const io = socketIo(server, { cors: { origin: 'https://kwickchat-adils-projects-30626c51.vercel.app' } });
 
 let waitingUser = null; // Queue for waiting users
 const userRooms = new Map(); // Map to track which room each user is in

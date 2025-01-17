@@ -17,7 +17,7 @@ const ChatPage = () => {
     const loggedInUserName = localStorage.getItem('userName') || 'You';
     setUserName(loggedInUserName);
 
-    const socketInstance = io('http://localhost:5000');
+    const socketInstance = io('https://kwickchat.onrender.com');
     setSocket(socketInstance);
 
     socketInstance.on('receive_message', (newMessage) => {
